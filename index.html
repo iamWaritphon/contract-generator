@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Text Generator</h1>
+    <p>กรอกข้อมูลเพื่อสร้างข้อความ</p>
+
+    <form id="generatorForm">
+      <label>ชื่อลูกค้า</label>
+      <input name="customer" required
+             placeholder="บริษัท ABC จำกัด">
+
+      <label>หัวข้องาน</label>
+      <input name="service" required
+             placeholder="ตรวจสอบเว็บไซต์">
+
+      <label>สถานะงาน</label>
+      <select name="status">
+        <option value="ดำเนินการเรียบร้อยแล้ว">
+          ดำเนินการเรียบร้อยแล้ว
+        </option>
+        <option value="กำลังดำเนินการ">
+          กำลังดำเนินการ
+        </option>
+        <option value="อยู่ระหว่างตรวจสอบ">
+          อยู่ระหว่างตรวจสอบ
+        </option>
+      </select>
+
+      <label>รายละเอียดเพิ่มเติม</label>
+      <textarea name="detail" rows="4"></textarea>
+
+      <button type="submit">สร้างข้อความ</button>
+    </form>
+
+    <section class="output">
+      <h3>ข้อความที่สร้างได้</h3>
+      <textarea id="result" rows="8" readonly></textarea>
+
+      <button type="button" id="copyBtn">
+        Copy ข้อความ
+      </button>
+
+      <button type="button" id="resetBtn">
+        Reset
+      </button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
