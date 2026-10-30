@@ -14,44 +14,40 @@
     <p>กรอกข้อมูลเพื่อสร้างข้อความ</p>
 
     <form id="generatorForm">
-      <label>ชื่อลูกค้า</label>
-      <input name="customer" required
-             placeholder="บริษัท ABC จำกัด">
+      <label>Domain name</label>
+      <input name="domain" required>
 
-      <label>หัวข้องาน</label>
-      <input name="service" required
-             placeholder="ตรวจสอบเว็บไซต์">
+      <label>Direct Admin URL</label>
+      <input name="host_ip" required>
 
-      <label>สถานะงาน</label>
-      <select name="status">
-        <option value="ดำเนินการเรียบร้อยแล้ว">
-          ดำเนินการเรียบร้อยแล้ว
-        </option>
-        <option value="กำลังดำเนินการ">
-          กำลังดำเนินการ
-        </option>
-        <option value="อยู่ระหว่างตรวจสอบ">
-          อยู่ระหว่างตรวจสอบ
-        </option>
-      </select>
+      <label>Host Username</label>
+      <input name="host_user" required>
 
-      <label>รายละเอียดเพิ่มเติม</label>
-      <textarea name="detail" rows="4"></textarea>
+      <label>Host Password</label>
+      <input name="host_password" required>
+
+      <hr>
+
+      <label>WP Username</label>
+      <input name="wp_user" required>
+
+      <label>WP Password</label>
+      <input name="wp_password" required>
+
+      <label>Email Reset</label>
+      <input name="wp_email" type="email" required>
+
+
 
       <button type="submit">สร้างข้อความ</button>
     </form>
 
     <section class="output">
       <h3>ข้อความที่สร้างได้</h3>
-      <textarea id="result" rows="8" readonly></textarea>
+      <textarea id="host_form" rows="12" readonly></textarea>
+      <textarea id="wp_form" rows="12" readonly></textarea>
+      <textarea id="divi_form" rows="4" readonly></textarea>
 
-      <button type="button" id="copyBtn">
-        Copy ข้อความ
-      </button>
-
-      <button type="button" id="resetBtn">
-        Reset
-      </button>
     </section>
   </main>
 
